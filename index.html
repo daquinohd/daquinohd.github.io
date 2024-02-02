@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Sunrise Sea OC</title>
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 	<link href="jquery.lbt-lightbox.min.css" rel="stylesheet">
@@ -12,7 +13,13 @@
 
 	<style>
 		h2 {
-			font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, sans-serif
+			color: #09415b;
+			font-family: Arial, Helvetica, sans-serif;
+			font-weight: 600;
+		}
+
+		h3 {
+			font-family: 'Arial', 'Trebuchet MS', sans-serif
 		}
 
 		hr {
@@ -20,14 +27,53 @@
 		}
 
 		footer {
-			background-color: teal;
+			background-color: #0d5f86;
 			color: white;
 			font-weight: 600;
 			margin-top: 24px;
 			padding: 12px 0px;
 		}
 
-		#about,
+		#navbarOc {
+			background-color: #ecf2ff !important;
+		}
+
+		#navbarOc:hover {
+			background-color: #d9eeff !important;
+		}
+
+		#navbarOc li.nav-item:hover {
+			background-color: #2bb8f0;
+		}
+
+		#banner {
+			background-image: url("bg-banner.jpg");
+			background-repeat: no-repeat;
+			background-position-y: center;
+			height: 35vh;
+		}
+
+		#title {
+			padding-bottom: 36px;
+			padding-top: 42px;
+		}
+
+		#title h2,
+		#title h3 {
+			text-align: center;
+		}
+
+		#about {
+			background-color: #ecf2ff !important;
+			margin-bottom: 24px;
+			margin-top: 24px;
+			padding: 36px 360px;
+		}
+
+		#about p {
+			text-align: center;
+		}
+
 		#nearby {
 			margin-top: 54px;
 		}
@@ -43,8 +89,19 @@
 			cursor: pointer;
 		}
 
+		#nearby {
+			background-color: #fcf7ef;
+			margin-bottom: 24px;
+			margin-top: 24px;
+			padding: 36px 0px;
+		}
+
 		#nearby li {
 			font-size: 18px;
+		}
+
+		#nearby li:hover {
+			font-weight: 700;
 		}
 
 		.float-right {
@@ -52,7 +109,7 @@
 		}
 	</style>
 
-	<!-- todo: center pictures, fix picture links, bg colors/palette, activate email links -->
+	<!-- todo: columns on table, bg colors/palette, activate email links -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
 		crossorigin="anonymous"></script>
@@ -64,7 +121,7 @@
 	<script>
 		$(document).ready(function () {
 			$('#gallery').lbtLightBox({
-				qtd_pagination: 4,
+				qtd_pagination: 5,
 				pagination_width: "60px",
 				pagination_height: "60px"
 
@@ -75,9 +132,8 @@
 </head>
 
 <body>
-
 	<!-- As a heading -->
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<nav id="navbarOc" class="navbar navbar-expand-lg navbar-light bg-light">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="#">Sunrise Sea OC</a>
 			<div class="collapse navbar-collapse" id="navbarScroll">
@@ -86,7 +142,7 @@
 						<a class="nav-link active" aria-current="page" href="#">Home</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#photos">Photos</a>
+						<a class="nav-link" href="#about">About</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="#availability">Availability</a>
@@ -102,35 +158,22 @@
 		</div>
 	</nav>
 
-	<div id="about" class="container container-fluid">
+	<div id="banner"></div>
+
+	<div id="title" class="container container-fluid">
 		<div class="row">
-			<h2>SUNRISE SEA, UNIT XXX</h2>
-			<h3>12 63RD ST, OCEAN CITY, MD 21842 · (410) 555-1274</h3>
-			<p>
-				Smoke-free 2 bedroom/2 bath Oceanside condo on 63rd St in Ocean City, MD. The building has an elevator,
-				pool and 2 covered parking spots. The beach is not crowded and away from all of the high-rise buildings.
-			</p>
-			<p>
-				It is located a few blocks away from several restaurants and bars (Rosenfeld's Jewish Deli, Dead
-				Freddie's, Fager's Island, General's Kitchen, and Annabelle's). 1 block away is a grocery store that
-				also sells beer and wine with a liquor store 2 blocks away.
-			</p>
-			<p>
-				We only charge the weekly rental rate, taxes and a cleaning fee. A fully refundable Security Depsit is
-				required which is quickly returned if no damages. We do not charge any additional high processing fees
-				like VRBO, Airbnb, Vacasa and other rental agencies that increase the final price.
-			</p>
-			<p>
-				Sorry, no pets are allowed per the Condo board.
-			</p>
+			<div class="col">
+				<h2>SUNRISE SEA</h2>
+				<h3>12 63RD ST, OCEAN CITY, MD 21842</h3>
+			</div>
 		</div>
-		<hr />
 	</div>
 
 	<div id="photos" class="container container-fluid">
 		<div class="row">
-			<h3>Photo Gallery</h3>
-			<div id="gallery">
+			<hr/>
+			<div class="col-1"></div>
+			<div id="gallery" class="col-10">
 				<img src="slide_00.jpg">
 				<img src="slide_01.jpg">
 				<img src="slide_02.jpg">
@@ -143,9 +186,45 @@
 				<img src="slide_09.jpg">
 				<img src="slide_10.jpg">
 			</div>
+			<div class="col-1"></div>
 		</div>
-		<hr />
 	</div>
+
+	<div id="about">
+		<div class="container container-fluid">
+			<div class="row">
+				<div class="col-sm-12">
+
+					<p>
+						Smoke-free 2 bedroom/2 bath Oceanside condo on 63rd St in Ocean City, MD. The building has an
+						elevator,
+						pool and 2 covered parking spots. The beach is not crowded and away from all of the high-rise
+						buildings.
+					</p>
+					<p>
+						It is located a few blocks away from several restaurants and bars (Rosenfeld's Jewish Deli, Dead
+						Freddie's, Fager's Island, General's Kitchen, and Annabelle's). 1 block away is a grocery store
+						that
+						also sells beer and wine with a liquor store 2 blocks away.
+					</p>
+					<p>
+						We only charge the weekly rental rate, taxes and a cleaning fee. A fully refundable Security
+						Depsit
+						is
+						required which is quickly returned if no damages. We do not charge any additional high
+						processing
+						fees
+						like VRBO, Airbnb, Vacasa and other rental agencies that increase the final price.
+					</p>
+					<p>
+						Sorry, no pets are allowed per the Condo board.
+					</p>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
 
 	<div id="availability" class="container container-fluid">
 		<div class="row">
@@ -221,23 +300,25 @@
 		</div>
 	</div>
 
-	<div id="nearby" class="container container-fluid">
-		<div class="row">
-			<h3>What's Nearby</h3>
-			<div class="col-md-8">
-				<img src="map.png">
-			</div>
-			<div class="col-md-4">
-				<ol>
-					<li>Rosenfeld's Jewish Deli</li>
-					<li>Dead Freddie's</li>
-					<li>Fager's Island</li>
-					<li>General's Kitchen</li>
-					<li>Annabelle's</li>
-					<li>Domino's Pizza</li>
-					<li>Denny's</li>
-					<li>Sea Bay Cafe</li>
-				</ol>
+	<div id="nearby">
+		<div class="container container-fluid">
+			<div class="row">
+				<h3>What's Nearby</h3>
+				<div class="col-lg-9 col-md-12">
+					<img src="map.png">
+				</div>
+				<div class="col-lg-3 col-md-12">
+					<ol>
+						<li>Rosenfeld's Jewish Deli</li>
+						<li>Dead Freddie's</li>
+						<li>Fager's Island</li>
+						<li>General's Kitchen</li>
+						<li>Annabelle's</li>
+						<li>Domino's Pizza</li>
+						<li>Denny's</li>
+						<li>Sea Bay Cafe</li>
+					</ol>
+				</div>
 			</div>
 		</div>
 	</div>
