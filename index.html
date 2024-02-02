@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sunrise Sea OC</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<link href="jquery.lbt-lightbox.min.css" rel="stylesheet">
+
+
+	<style>
+		h2 {
+			font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, sans-serif
+		}
+
+		hr {
+			margin-bottom: 54px;
+		}
+
+		footer {
+			background-color: teal;
+			color: white;
+			font-weight: 600;
+			margin-top: 24px;
+			padding: 12px 0px;
+		}
+
+		#about,
+		#nearby {
+			margin-top: 54px;
+		}
+
+		#gallery img {
+			height: 250px;
+			width: 350px;
+			padding: 6px;
+			padding-left: 0px;
+		}
+
+		#gallery img:hover {
+			cursor: pointer;
+		}
+
+		#nearby li {
+			font-size: 18px;
+		}
+
+		.float-right {
+			float: right;
+		}
+	</style>
+
+	<!-- todo: center pictures, fix picture links, bg colors/palette, activate email links -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+		crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+		integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+	<script src="jquery.lbt-lightbox.cust.min.js"></script>
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+	<script>
+		$(document).ready(function () {
+			$('#gallery').lbtLightBox({
+				qtd_pagination: 4,
+				pagination_width: "60px",
+				pagination_height: "60px"
+
+			});
+		});
+	</script>
+
+</head>
+
+<body>
+
+	<!-- As a heading -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">Sunrise Sea OC</a>
+			<div class="collapse navbar-collapse" id="navbarScroll">
+				<ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="#">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#photos">Photos</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#availability">Availability</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#nearby">What's Nearby</a>
+					</li>
+				</ul>
+				<form class="d-flex">
+					<a class="btn btn-outline-danger" type="button" href="mailto:iir9203@sharklasers.com">Book Now</a>
+				</form>
+			</div>
+		</div>
+	</nav>
+
+	<div id="about" class="container container-fluid">
+		<div class="row">
+			<h2>SUNRISE SEA, UNIT XXX</h2>
+			<h3>12 63RD ST, OCEAN CITY, MD 21842 · (410) 555-1274</h3>
+			<p>
+				Smoke-free 2 bedroom/2 bath Oceanside condo on 63rd St in Ocean City, MD. The building has an elevator,
+				pool and 2 covered parking spots. The beach is not crowded and away from all of the high-rise buildings.
+			</p>
+			<p>
+				It is located a few blocks away from several restaurants and bars (Rosenfeld's Jewish Deli, Dead
+				Freddie's, Fager's Island, General's Kitchen, and Annabelle's). 1 block away is a grocery store that
+				also sells beer and wine with a liquor store 2 blocks away.
+			</p>
+			<p>
+				We only charge the weekly rental rate, taxes and a cleaning fee. A fully refundable Security Depsit is
+				required which is quickly returned if no damages. We do not charge any additional high processing fees
+				like VRBO, Airbnb, Vacasa and other rental agencies that increase the final price.
+			</p>
+			<p>
+				Sorry, no pets are allowed per the Condo board.
+			</p>
+		</div>
+		<hr />
+	</div>
+
+	<div id="photos" class="container container-fluid">
+		<div class="row">
+			<h3>Photo Gallery</h3>
+			<div id="gallery">
+				<img src="slide_00.jpg">
+				<img src="slide_01.jpg">
+				<img src="slide_02.jpg">
+				<img src="slide_03.jpg">
+				<img src="slide_04.jpg">
+				<img src="slide_05.jpg">
+				<img src="slide_06.jpg">
+				<img src="slide_07.jpg">
+				<img src="slide_08.jpg">
+				<img src="slide_09.jpg">
+				<img src="slide_10.jpg">
+			</div>
+		</div>
+		<hr />
+	</div>
+
+	<div id="availability" class="container container-fluid">
+		<div class="row">
+			<div class="col-md-10">
+				<h3>Availability</h3>
+				<div>
+					Right now, there are still several weeks available during the summer. We also rent in the offseason.
+					Please inquire for pricing.
+				</div>
+			</div>
+			<div class="col-md-2">
+				<a class="btn btn-lg btn-outline-danger" type="button" href="mailto:iir9203@sharklasers.com">Contact
+					Us</a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<table class="table">
+					<thead>
+						<tr>
+							<th scope="col">Dates</th>
+							<th scope="col">Nightly</th>
+							<th scope="col">Weekend</th>
+							<th scope="col">Minimum Stay</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>May 25-June 1 (includes Memorial Day weekend) </td>
+							<td>$tbd</td>
+							<td>$tbd</td>
+							<td>7</td>
+						</tr>
+						<tr>
+							<td>July 13-20</td>
+							<td>$tbd</td>
+							<td>$tbd</td>
+							<td>7</td>
+						</tr>
+						<tr>
+							<td>July 20-27</td>
+							<td>$tbd</td>
+							<td>$tbd</td>
+							<td>7</td>
+						</tr>
+						<tr>
+							<td>August 10-17</td>
+							<td>$tbd</td>
+							<td>$tbd</td>
+							<td>7</td>
+						</tr>
+						<tr>
+							<td>August 24-31 (includes Ocean City Air Show)</td>
+							<td>$tbd</td>
+							<td>$tbd</td>
+							<td>7</td>
+						</tr>
+						<tr>
+							<td>August 31- September 7</td>
+							<td>$tbd</td>
+							<td>$tbd</td>
+							<td>7</td>
+						</tr>
+						<tr>
+							<td>September 7-14</td>
+							<td>$tbd</td>
+							<td>$tbd</td>
+							<td>7</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+	<div id="nearby" class="container container-fluid">
+		<div class="row">
+			<h3>What's Nearby</h3>
+			<div class="col-md-8">
+				<img src="map.png">
+			</div>
+			<div class="col-md-4">
+				<ol>
+					<li>Rosenfeld's Jewish Deli</li>
+					<li>Dead Freddie's</li>
+					<li>Fager's Island</li>
+					<li>General's Kitchen</li>
+					<li>Annabelle's</li>
+					<li>Domino's Pizza</li>
+					<li>Denny's</li>
+					<li>Sea Bay Cafe</li>
+				</ol>
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		<div class="container">
+			<span>
+				Last updated 2024-02-01
+			</span>
+			<span class="float-right">
+				Questions? Contact Us | (410) 555-1274
+			</span>
+		</div>
+	</footer>
+</body>
+
+</html>
