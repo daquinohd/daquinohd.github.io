@@ -1,0 +1,131 @@
+h2 {
+    color: #09415b;
+    font-size: 2.25rem;
+    font-weight: 300;
+}
+
+h3 {
+    font-family: 'Arial', 'Trebuchet MS', sans-serif
+}
+
+hr {
+    margin: 1rem 0rem 1rem !important;
+}
+
+footer {
+    background-color: #0d5f86;
+    color: white;
+    font-weight: 600;
+    padding: 24px 0px;
+}
+
+#navbarOc {
+    background-color: #0d5f86 !important;
+}
+
+#navbarOc .nav-item a {
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+#navbarOc .nav-item a:hover {
+    color: #ffe108;
+}
+
+#burger,
+button.navbar-toggler,
+.navbar-toggler-icon {
+    color: #ffffff !important;
+}
+
+#banner {
+    background-image: url("bg-banner.jpg");
+    background-repeat: no-repeat;
+    background-position-y: 45%;
+    height: 40vh;
+    margin-top: 0px
+}
+
+#title {
+    padding-bottom: 36px;
+    padding-top: 42px;
+}
+
+#about {
+    background-image: linear-gradient(to bottom right, #ffe9bf, #fafafa, #ffffe9);
+    margin-bottom: 24px;
+    padding: 36px 0px;
+}
+
+#about .address {
+    /* border-right: 2px solid black; */
+}
+
+#about p {
+    text-align: justify !important;
+}
+
+#nearby {
+    margin-top: 54px;
+}
+
+#gallery .img-thumbnail {
+    height: 250px;
+    width: 350px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+#gallery img:hover {
+    cursor: pointer;
+}
+
+.carousel-inner {
+    height: 0;
+    padding-bottom: 200%;
+    /* this sets carousel aspect ratio (4:1 here) */
+}
+
+.carousel-item {
+    position: absolute !important;
+    /* Bootstrap is insistent */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.carousel-item img {
+    height: 100%;
+    /* Bootstrap handles width already */
+    object-fit: contain;
+    /* object-fit: cover; */
+    /* or 'contain' if you want stretch instead of crop */
+}
+
+#nearby {
+    background-color: #fcf7ef;
+    margin-bottom: 24px;
+    margin-top: 24px;
+    padding: 36px 0px;
+}
+
+#nearby li {
+    font-size: 18px;
+}
+
+#nearby li:hover {
+    font-weight: 700;
+}
+
+.float-right {
+    float: right;
+}
+
+#btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+}

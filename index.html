@@ -6,143 +6,47 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Sunrise Sea OC</title>
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
+
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-	<link href="jquery.lbt-lightbox.min.css" rel="stylesheet">
+	<link href="sunriseseaoc.css" rel="stylesheet">
 
-
-	<style>
-		h2 {
-			color: #09415b;
-			font-family: Arial, Helvetica, sans-serif;
-			font-weight: 600;
-		}
-
-		h3 {
-			font-family: 'Arial', 'Trebuchet MS', sans-serif
-		}
-
-		hr {
-			margin-bottom: 54px;
-		}
-
-		footer {
-			background-color: #0d5f86;
-			color: white;
-			font-weight: 600;
-			margin-top: 24px;
-			padding: 12px 0px;
-		}
-
-		#navbarOc {
-			background-color: #ecf2ff !important;
-		}
-
-		#navbarOc:hover {
-			background-color: #d9eeff !important;
-		}
-
-		#navbarOc li.nav-item:hover {
-			background-color: #2bb8f0;
-		}
-
-		#banner {
-			background-image: url("bg-banner.jpg");
-			background-repeat: no-repeat;
-			background-position-y: center;
-			height: 35vh;
-		}
-
-		#title {
-			padding-bottom: 36px;
-			padding-top: 42px;
-		}
-
-		#title h2,
-		#title h3 {
-			text-align: center;
-		}
-
-		#about {
-			background-color: #ecf2ff !important;
-			margin-bottom: 24px;
-			margin-top: 24px;
-			padding: 36px 360px;
-		}
-
-		#about p {
-			text-align: center;
-		}
-
-		#nearby {
-			margin-top: 54px;
-		}
-
-		#gallery img {
-			height: 250px;
-			width: 350px;
-			padding: 6px;
-			padding-left: 0px;
-		}
-
-		#gallery img:hover {
-			cursor: pointer;
-		}
-
-		#nearby {
-			background-color: #fcf7ef;
-			margin-bottom: 24px;
-			margin-top: 24px;
-			padding: 36px 0px;
-		}
-
-		#nearby li {
-			font-size: 18px;
-		}
-
-		#nearby li:hover {
-			font-weight: 700;
-		}
-
-		.float-right {
-			float: right;
-		}
-	</style>
-
-	<!-- todo: columns on table, bg colors/palette, activate email links -->
+	<!-- 
+		todo: 
+		* Modal size
+		* Clean up table columns
+		* Bg colors/palette
+		* Activate email links 
+		* Hover state on map
+	-->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-		crossorigin="anonymous"></script>
+		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+		</script>
 	<script src="https://code.jquery.com/jquery-3.7.1.min.js"
-		integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-	<script src="jquery.lbt-lightbox.cust.min.js"></script>
+		integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous">
+		</script>
 	<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-
-	<script>
-		$(document).ready(function () {
-			$('#gallery').lbtLightBox({
-				qtd_pagination: 5,
-				pagination_width: "60px",
-				pagination_height: "60px"
-
-			});
-		});
-	</script>
-
+	<script src="sunriseseaoc.js"></script>
 </head>
 
 <body>
 	<!-- As a heading -->
 	<nav id="navbarOc" class="navbar navbar-expand-lg navbar-light bg-light">
 		<div class="container-fluid">
-			<a class="navbar-brand" href="#">Sunrise Sea OC</a>
+			<a class="navbar-brand" href="#">
+				<img src="logo.png" alt="" width="48" height="48">
+			</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span id="burger" class="navbar-toggler-icon"></span>
+			</button>
 			<div class="collapse navbar-collapse" id="navbarScroll">
 				<ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
 					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="#">Home</a>
+						<a class="nav-link" href="#">Home</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#about">About</a>
+						<a class="nav-link" href="#photos">Photos</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="#availability">Availability</a>
@@ -152,147 +56,179 @@
 					</li>
 				</ul>
 				<form class="d-flex">
-					<a class="btn btn-outline-danger" type="button" href="mailto:iir9203@sharklasers.com">Book Now</a>
+					<a class="btn btn-warning" type="button" href="mailto:iir9203@sharklasers.com">Book Now</a>
 				</form>
 			</div>
 		</div>
 	</nav>
 
-	<div id="banner"></div>
+	<button type="button" class="btn btn-warning btn-floating btn-lg" id="btn-back-to-top">
+		&uarr; Back to Top
+	</button>
 
-	<div id="title" class="container container-fluid">
-		<div class="row">
-			<div class="col">
-				<h2>SUNRISE SEA</h2>
-				<h3>12 63RD ST, OCEAN CITY, MD 21842</h3>
-			</div>
-		</div>
-	</div>
+	<div id="banner" title="By Rae K. Hauck - Own work, CC BY-SA 3.0"></div>
 
-	<div id="photos" class="container container-fluid">
-		<div class="row">
-			<hr/>
-			<div class="col-1"></div>
-			<div id="gallery" class="col-10">
-				<img src="slide_00.jpg">
-				<img src="slide_01.jpg">
-				<img src="slide_02.jpg">
-				<img src="slide_03.jpg">
-				<img src="slide_04.jpg">
-				<img src="slide_05.jpg">
-				<img src="slide_06.jpg">
-				<img src="slide_07.jpg">
-				<img src="slide_08.jpg">
-				<img src="slide_09.jpg">
-				<img src="slide_10.jpg">
-			</div>
-			<div class="col-1"></div>
-		</div>
-	</div>
-
-	<div id="about">
-		<div class="container container-fluid">
+	<div id="about" class="container-fluid">
+		<div class="container">
 			<div class="row">
-				<div class="col-sm-12">
+				<div class="col-12 col-md-5 address">
+					<h1 class="display-3">SUNRISE SEA 105</h1>
+					<h2>12 63RD ST #105 <br />OCEAN CITY, MD 21842</h2>
+				</div>
 
-					<p>
+				<div class="col-12 col-md-7">
+					<p class="text-justify">
 						Smoke-free 2 bedroom/2 bath Oceanside condo on 63rd St in Ocean City, MD. The building has an
-						elevator,
-						pool and 2 covered parking spots. The beach is not crowded and away from all of the high-rise
-						buildings.
+						elevator, pool and 2 covered parking spots. The beach is not crowded and away from all of the
+						high-rise buildings.
 					</p>
-					<p>
+					<p class="text-justify">
 						It is located a few blocks away from several restaurants and bars (Rosenfeld's Jewish Deli, Dead
 						Freddie's, Fager's Island, General's Kitchen, and Annabelle's). 1 block away is a grocery store
-						that
-						also sells beer and wine with a liquor store 2 blocks away.
+						that also sells beer and wine with a liquor store 2 blocks away.
 					</p>
-					<p>
+					<p class="text-justify">
 						We only charge the weekly rental rate, taxes and a cleaning fee. A fully refundable Security
-						Depsit
-						is
-						required which is quickly returned if no damages. We do not charge any additional high
-						processing
-						fees
-						like VRBO, Airbnb, Vacasa and other rental agencies that increase the final price.
+						Depsit is required which is quickly returned if no damages. We do not charge any additional high
+						processing fees like VRBO, Airbnb, Vacasa and other rental agencies that increase the final
+						price.
 					</p>
-					<p>
+					<p class="text-justify">
 						Sorry, no pets are allowed per the Condo board.
 					</p>
 				</div>
-
 			</div>
 		</div>
 	</div>
 
+	<div id="photos" class="container">
+		<div class="row">
+			<hr />
+			<div class="col-0 col-lg-1"></div>
+			<div id="gallery" class="col-12 col-lg-10">
+				<a type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+					<img src="slide_00.jpg" class="img-thumbnail rounded" alt="slideshow">
+					<img src="slide_01.jpg" class="img-thumbnail rounded" alt="slideshow">
+					<img src="slide_02.jpg" class="img-thumbnail rounded" alt="slideshow">
+					<img src="slide_03.jpg" class="img-thumbnail rounded" alt="slideshow">
+					<img src="slide_04.jpg" class="img-thumbnail rounded" alt="slideshow">
+					<img src="slide_05.jpg" class="img-thumbnail rounded" alt="slideshow">
+					<img src="slide_06.jpg" class="img-thumbnail rounded" alt="slideshow">
+					<img src="slide_07.jpg" class="img-thumbnail rounded" alt="slideshow">
+					<img src="slide_08.jpg" class="img-thumbnail rounded" alt="slideshow">
+					<img src="slide_09.jpg" class="img-thumbnail rounded" alt="slideshow">
+					<img src="slide_10.jpg" class="img-thumbnail rounded" alt="slideshow">
+				</a>
+			</div>
+			<div class="col-0 col-lg-1"></div>
+		</div>
+	</div>
 
 	<div id="availability" class="container container-fluid">
 		<div class="row">
-			<div class="col-md-10">
-				<h3>Availability</h3>
+			<hr />
+			<div class="col-12 col-lg-10">
+				<h3>Rates and Availability</h3>
 				<div>
 					Right now, there are still several weeks available during the summer. We also rent in the offseason.
 					Please inquire for pricing.
 				</div>
 			</div>
 			<div class="col-md-2">
-				<a class="btn btn-lg btn-outline-danger" type="button" href="mailto:iir9203@sharklasers.com">Contact
-					Us</a>
+				<a class="btn btn-lg btn-outline-danger" type="button" href="mailto:iir9203@sharklasers.com">
+					Contact Us
+				</a>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col">
+			<div class="col-sm-12">
+				<h4>Summer 2024</h4>
 				<table class="table">
 					<thead>
 						<tr>
 							<th scope="col">Dates</th>
 							<th scope="col">Nightly</th>
-							<th scope="col">Weekend</th>
-							<th scope="col">Minimum Stay</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
 							<td>May 25-June 1 (includes Memorial Day weekend) </td>
 							<td>$tbd</td>
-							<td>$tbd</td>
-							<td>7</td>
 						</tr>
 						<tr>
 							<td>July 13-20</td>
 							<td>$tbd</td>
-							<td>$tbd</td>
-							<td>7</td>
 						</tr>
 						<tr>
 							<td>July 20-27</td>
 							<td>$tbd</td>
-							<td>$tbd</td>
-							<td>7</td>
 						</tr>
 						<tr>
 							<td>August 10-17</td>
 							<td>$tbd</td>
-							<td>$tbd</td>
-							<td>7</td>
 						</tr>
 						<tr>
 							<td>August 24-31 (includes Ocean City Air Show)</td>
 							<td>$tbd</td>
-							<td>$tbd</td>
-							<td>7</td>
 						</tr>
 						<tr>
 							<td>August 31- September 7</td>
 							<td>$tbd</td>
-							<td>$tbd</td>
-							<td>7</td>
 						</tr>
 						<tr>
 							<td>September 7-14</td>
 							<td>$tbd</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<h4>Off Season</h4>
+				<table class="table">
+					<thead>
+						<tr>
+							<th scope="col">Dates</th>
+							<th scope="col">Nightly</th>
+							<th scope="col">Minimum Stay</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>September 15-September XX</td>
 							<td>$tbd</td>
-							<td>7</td>
+							<td>3</td>
+						</tr>
+						<tr>
+							<td>September XX-October XX</td>
+							<td>$tbd</td>
+							<td>3</td>
+						</tr>
+						<tr>
+							<td>October XX-November XX</td>
+							<td>$tbd</td>
+							<td>3</td>
+						</tr>
+						<tr>
+							<td>November XX-December XX</td>
+							<td>$tbd</td>
+							<td>3</td>
+						</tr>
+						<tr>
+							<td>December XX-January XX</td>
+							<td>$tbd</td>
+							<td>3</td>
+						</tr>
+						<tr>
+							<td>January XX-February XX</td>
+							<td>$tbd</td>
+							<td>3</td>
+						</tr>
+						<tr>
+							<td>February XX-March XX</td>
+							<td>$tbd</td>
+							<td>3</td>
 						</tr>
 					</tbody>
 				</table>
@@ -318,6 +254,91 @@
 						<li>Denny's</li>
 						<li>Sea Bay Cafe</li>
 					</ol>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body slideshow">
+					<div class="container-fluid">
+						<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+							<div class="carousel-indicators">
+								<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+									class="active" aria-current="true" aria-label="Slide 1"></button>
+								<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+									aria-label="Slide 2"></button>
+								<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+									aria-label="Slide 3"></button>
+								<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+									aria-label="Slide 4"></button>
+								<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+									aria-label="Slide 5"></button>
+								<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"
+									aria-label="Slide 6"></button>
+								<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6"
+									aria-label="Slide 7"></button>
+								<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7"
+									aria-label="Slide 8"></button>
+								<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="8"
+									aria-label="Slide 9"></button>
+								<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="9"
+									aria-label="Slide 10"></button>
+								<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="10"
+									aria-label="Slide 11"></button>
+							</div>
+							<div class="carousel-inner">
+								<div class="carousel-item active">
+									<img src="slide_00.jpg" class="d-block w-100" alt="...">
+								</div>
+								<div class="carousel-item">
+									<img src="slide_01.jpg" class="d-block w-100" alt="...">
+								</div>
+								<div class="carousel-item">
+									<img src="slide_02.jpg" class="d-block w-100" alt="...">
+								</div>
+								<div class="carousel-item">
+									<img src="slide_03.jpg" class="d-block w-100" alt="...">
+								</div>
+								<div class="carousel-item">
+									<img src="slide_04.jpg" class="d-block w-100" alt="...">
+								</div>
+								<div class="carousel-item">
+									<img src="slide_05.jpg" class="d-block w-100" alt="...">
+								</div>
+								<div class="carousel-item">
+									<img src="slide_06.jpg" class="d-block w-100" alt="...">
+								</div>
+								<div class="carousel-item">
+									<img src="slide_07.jpg" class="d-block w-100" alt="...">
+								</div>
+								<div class="carousel-item">
+									<img src="slide_08.jpg" class="d-block w-100" alt="...">
+								</div>
+								<div class="carousel-item">
+									<img src="slide_09.jpg" class="d-block w-100" alt="...">
+								</div>
+								<div class="carousel-item">
+									<img src="slide_10.jpg" class="d-block w-100" alt="...">
+								</div>
+							</div>
+							<button class="carousel-control-prev" type="button"
+								data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Previous</span>
+							</button>
+							<button class="carousel-control-next" type="button"
+								data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Next</span>
+							</button>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
